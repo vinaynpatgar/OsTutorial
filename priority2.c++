@@ -26,13 +26,13 @@ int main()
     for(i=0;i<n;i++)
         x[i]=b[i];
 
-    pr[9]=-1;
+    pr[9]=100;
     for(time=0;count!=n;time++)
     {
         smallest=9;
         for(i=0;i<n;i++)
         {
-            if(a[i]<=time && pr[i]>pr[smallest] && b[i]>0 )
+            if(a[i]<=time && pr[i]<pr[smallest] && b[i]>0 )
                 smallest=i;
         }
         time+=b[smallest]-1;
